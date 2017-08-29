@@ -1,0 +1,17 @@
+{
+    "name": "arc-music-player.arc676",
+    "description": "description of Arc-Music-Player",
+    "architecture": "@CLICK_ARCH@",
+    "title": "Arc-Music-Player",
+    "hooks": {
+        "Arc-Music-Player": {
+            "apparmor": "Arc-Music-Player/Arc-Music-Player.apparmor",
+            "desktop":  "Arc-Music-Player/Arc-Music-Player.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
+    "framework" : "ubuntu-sdk-15.04.6"
+}
+
+

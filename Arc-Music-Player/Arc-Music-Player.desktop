@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Arc-Music-Player
+Exec=qmlscene %U Arc-Music-Player/Main.qml
+Icon=Arc-Music-Player/Arc-Music-Player.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
