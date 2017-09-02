@@ -1,0 +1,27 @@
+name: arc-music-player-linux
+version: '2.0'
+summary: A simple music player
+description: |
+  The Arc Music Player is a path- rather than library-based music player. It
+  provides just the bare essentials required for a music playing application.
+  It's purpose is to be a lightweight and simple app for playing your music,
+  wherever it's saved.
+icon: Arc-Music-Player/Arc-Music-Player.png
+
+grade: devel
+confinement: devmode
+
+parts:
+  arcmusicplayer:
+    plugin: nil
+    source: Arc-Music-Player
+    after: [ desktop-qt5 ]
+    stage-packages: [ qmlscene, qml-module-qtquick2, qml-module-qtquick-controls, qml-module-ubuntu-components ]
+    install: |
+      cp -v Main.qml PlaybackControls.qml SongLoader.qml SongOrder.qml Arc-Music-Player.png Arc-Music-Player.desktop $SNAPCRAFT_PART_INSTALL
+
+apps:
+  arcmusicplayer:
+    command: desktop-launch qmlscene $SNAP/Main.qml
+    desktop: Arc-Music-Player.desktop
+    plugs: [ x11 ]
